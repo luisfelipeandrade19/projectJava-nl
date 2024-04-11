@@ -15,7 +15,7 @@ import rocketseat.com.passin.repositories.EventRepository;
 public class EventService {
     private final EventRepository eventRepository;
 
-    public void getEventDetail(String eventId){
+    public  void getEventDetail(String eventId){
         Event event =  this.eventRepository.findById(eventId).orElseThrow(()-> new RuntimeException("Event not found with ID: "+ eventId));
         return ;
     }
